@@ -317,28 +317,36 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-.boton{
-    background-color: rgb(216, 0, 29);
+.boton {
+    background: linear-gradient(135deg, rgb(216, 0, 29), rgb(255, 0, 64));
     border: none;
     color: white;
-    padding: 20px 80px;
+    padding: 18px 60px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-.boton:hover {
-    background-color: rgb(255, 0, 64);
-}
-@media (max-width: 600px) {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 0, 64, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  }
+  
+  .boton:hover {
+    background: linear-gradient(135deg, rgb(255, 0, 64), rgb(216, 0, 29));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 0, 64, 0.5);
+  }
+  
+  @media (max-width: 600px) {
     .boton {
-        padding: 15px 40px;
-        font-size: 14px;
+      padding: 14px 32px;
+      font-size: 14px;
     }
     .imagen-inicio {
-        width: 90%;
-        max-width: 300px;
+      width: 90%;
+      max-width: 300px;
     }
-}
+  }
+  

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Audio Player</title>
+</head>
+<body>
+  <audio id="adoreAudio" loop autoplay>
+    <source src="adore-you.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("adoreAudio");
+
+    window.addEventListener("message", (event) => {
+      if (event.data === "play") {
+        audio.play().catch(() => console.log("Autoplay bloqueado"));
+      }
+    });
+
+    // Intentar reproducir automáticamente
+    window.addEventListener("load", () => {
+      audio.play().catch(() => console.log("Autoplay bloqueado"));
+    });
+  </script>
+</body>
+</html>
