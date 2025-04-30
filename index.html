@@ -11,14 +11,39 @@
             const imagen = document.querySelector('.imagen-inicio');
             imagen.src = 'kitty2.png';
         }
-
         function restaurarImagen() {
             const imagen = document.querySelector('.imagen-inicio');
             imagen.src = 'kitty1.png';
         }
+        function toggleMusic() {
+            const audio = document.getElementById('adoreAudio');
+            const button = document.getElementById('musicButton');
+
+            if (audio.paused) {
+                audio.play();
+                button.textContent = '⏸️ Pausar música';
+            } else {
+                audio.pause();
+                button.textContent = '▶️ Reproducir música';
+            }
+        }
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('adoreAudio');
+            const button = document.getElementById('musicButton');
+
+            audio.play().then(() => {
+                button.textContent = '⏸️ Pausar música';
+            }).catch(() => {
+                button.textContent = '▶️ Reproducir música';
+            });
+        });
     </script>
 </head>
-<body>
+<body>  
+    <audio id="adoreAudio" loop>
+        <source src="adore-you.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
     <div class="snow"></div>
     <div class="snow"></div>
     <div class="snow"></div>
@@ -46,15 +71,12 @@
     <div class="snow"></div>  
     <div class="snow"></div>  
     <div class="snow"></div>  
-    <div class="snow"></div>  
-    <div class="snow"></div>  
-    <div class="snow"></div>
-
     <h1>Me encanta cada momento que hemos pasado juntos ❤️</h1>
     <br>
     <a href="carta.html" class="boton" onmouseover="cambiarImagenHover()" onmouseout="restaurarImagen()">Ver más ❤️</a>
     <br><br>
-    <img src="kitty1.png" alt="Simon Dice" class="imagen-inicio" width="400">
+    <img src="kitty1.png" class="imagen-inicio" width="400">
     <br><br>
+    <button id="musicButton" class="boton" onclick="toggleMusic()">▶️ Reproducir música</button>
 </body>
 </html>
