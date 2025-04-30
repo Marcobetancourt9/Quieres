@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quieres</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="corazon.png" type="image/png" />
-  <script>
-    function cambiarImagenHover() {
-      const imagen = document.querySelector('.imagen-inicio');
-      imagen.src = 'kitty2.png';
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quieres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="corazon.png" type="image/png">
+    <script>
+        function cambiarImagenHover() {
+            const imagen = document.querySelector('.imagen-inicio');
+            imagen.src = 'kitty2.png';
+        }
 
-    function restaurarImagen() {
-      const imagen = document.querySelector('.imagen-inicio');
-      imagen.src = 'kitty1.png';
-    }
-
-    function activarMusica() {
-      const iframe = document.getElementById('audioFrame');
-      iframe.contentWindow.postMessage('play', '*');
-    }
-  </script>
+        function restaurarImagen() {
+            const imagen = document.querySelector('.imagen-inicio');
+            imagen.src = 'kitty1.png';
+        }
+    </script>
 </head>
 <body>
-  <!-- Inserta el iframe oculto con el audio -->
-  <iframe src="audio.html" style="display: none;" allow="autoplay" id="audioFrame"></iframe>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>  
+    <div class="snow"></div>
 
-  <!-- Nieve decorativa -->
-  <div class="snow"></div>
-  <div class="snow"></div>
-  <div class="snow"></div>
-  <div class="snow"></div>
-  <div class="snow"></div>
-  <!-- Puedes reducir la cantidad si lo deseas -->
-  
-  <!-- Contenido principal -->
-  <h1>Me encanta cada momento que hemos pasado juntos ❤️</h1>
-  <br />
-  <a href="carta.html" class="boton" onmouseover="cambiarImagenHover()" onmouseout="restaurarImagen()">Ver más ❤️</a>
-  <br /><br />
-
-  <!-- Imagen que cambia -->
-  <img src="kitty1.png" alt="Simon Dice" class="imagen-inicio" width="400" />
-  <br /><br />
-
-  <!-- Botón para activar música -->
-  <button class="boton" onclick="activarMusica()">🔊 Activar música</button>
+    <h1>Me encanta cada momento que hemos pasado juntos ❤️</h1>
+    <br>
+    <a href="carta.html" class="boton" onmouseover="cambiarImagenHover()" onmouseout="restaurarImagen()">Ver más ❤️</a>
+    <br><br>
+    <img src="kitty1.png" alt="Simon Dice" class="imagen-inicio" width="400">
+    <br><br>
 </body>
 </html>

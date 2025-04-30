@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi novia? ❤️</title>
     <link rel="icon" href="corazon.png" type="image/png">
+    <script>
+        function activarMusica() {
+            const iframe = document.getElementById('audioFrame');
+            iframe.contentWindow.postMessage('play', '*');
+        }
+    </script>
     <style>
         body {
             margin: 0;
@@ -19,7 +25,7 @@
 
         .heart {
             position: relative;
-            width: 200px; 
+            width: 200px;
             height: 200px;
             background-color: #f20044;
             box-shadow: -20px 20px 100px #f20044;
@@ -31,7 +37,7 @@
         .heart::after {
             content: '';
             position: absolute;
-            width: 200px; 
+            width: 200px;
             height: 200px;
             background: #f20044;
             border-radius: 50%;
@@ -66,9 +72,8 @@
             50% { transform: rotate(-45deg) scale(1.15); }
             100% { transform: rotate(-45deg) scale(1); }
         }
-        
+
         @media (max-width: 600px) {
-            
             .heart {
                 width: 120px;
                 height: 120px;
@@ -97,7 +102,12 @@
     </style>
 </head>
 <body>
+    <iframe src="audio.html" style="display: none;" allow="autoplay" id="audioFrame"></iframe>
+
     <div class="heart"></div>
-    <div class="contenido"><h1>¿Quieres ser mi novia?</h1> <h2>........❤️.........</h2></div>
+    <div class="contenido">
+        <h1>¿Quieres ser mi novia?</h1>
+        <h2>........❤️.........</h2>
+    </div>
 </body>
 </html>
